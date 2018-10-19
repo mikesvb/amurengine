@@ -1,0 +1,20 @@
+{
+    "name": "mikesvb/amurengine",
+    "description": "AmurEngineProject",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MikeSVB",
+            "email": "mikesvb@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "app",
+            "amurengine\\core\\": "vendor/amurengine/core"
+        }
+    }
+}
