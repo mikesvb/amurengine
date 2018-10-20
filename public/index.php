@@ -1,9 +1,8 @@
 <?php
 
+use amurengine\core\Route;
+
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = new app\App();
-
-echo $app->getFramework();
-
+Route::start();
 ?>
