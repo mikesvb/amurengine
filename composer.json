@@ -15,6 +15,7 @@
         "psr-4": {
             "app\\": "app",
             "app\\controllers\\": "app/controllers",
+            "app\\models\\": "app/models",
             "amurengine\\core\\": "vendor/amurengine/core"
         }
     }

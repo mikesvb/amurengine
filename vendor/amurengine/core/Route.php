@@ -32,15 +32,15 @@ class Route
 		// подцепляем файл с классом модели (файла модели может и не быть)
 
 		$model_file = strtolower($model_name).'.php';
-		$model_path = "app/models/".$model_file;
+		$model_path = PATH."/../app/models/".$model_file;
 		if(file_exists($model_path))
-		{
-			include "app/models/".$model_file;
+		{ 
+			include $model_path;
 		}
 
 		// подцепляем файл с классом контроллера
 		$controller_file = strtolower($controller_name).'.php';
-		$controller_path = $_SERVER['DOCUMENT_ROOT']."/../app/controllers/".$controller_file;
+		$controller_path = PATH."/../app/controllers/".$controller_file;
 		
 		if(file_exists($controller_path))
 		{
@@ -52,7 +52,7 @@ class Route
 			правильно было бы кинуть здесь исключение,
 			но для упрощения сразу сделаем редирект на страницу 404
 			*/
-			//Route::ErrorPage404();
+			Route::ErrorPage404();
 		}
 		
 		// создаем контроллер
@@ -72,7 +72,7 @@ class Route
 	
 	}
 	
-	function ErrorPage404()
+	public static function ErrorPage404()
 	{
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');

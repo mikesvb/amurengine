@@ -1,5 +1,7 @@
 <?php
 
+use amurengine\core\Controller;
+
 class Controller_404 extends Controller
 {
 	
